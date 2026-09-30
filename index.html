@@ -73,24 +73,6 @@
             text-align: center;
         }
 
-        .avatar {
-            width: clamp(66px, 20vw, 92px);
-            aspect-ratio: 1;
-            margin: 0 auto clamp(12px, 3vw, 18px);
-            display: grid;
-            place-items: center;
-            border: 4px solid var(--line);
-            border-radius: 50%;
-            background: linear-gradient(145deg, var(--accent-red), var(--accent-purple));
-            box-shadow: 0 0 0 4px rgba(255, 49, 49, .25);
-            font-family: 'Bangers', cursive;
-            font-size: clamp(1.9rem, 6vw, 2.6rem);
-            letter-spacing: 1px;
-            color: #fff;
-            text-shadow: 3px 3px 0 var(--line);
-            animation: pop .5s cubic-bezier(.2, 1.4, .4, 1) both;
-        }
-
         .header h1 {
             font-family: 'Bangers', cursive;
             font-size: clamp(2.3rem, 11vw, 3.6rem);
@@ -232,7 +214,6 @@
 
         /* ============ ANIMATION ============ */
         @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
-        @keyframes pop { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: scale(1); } }
 
         /* ============ RESPONSIVE ============ */
         @media (hover: hover) {
@@ -271,7 +252,6 @@
         /* Orientasi landscape ponsel */
         @media (max-height: 460px) and (orientation: landscape) {
             .header { padding: 18px var(--pad); }
-            .avatar { display: none; }
             .links-container { margin: 18px auto; }
         }
 
@@ -290,14 +270,12 @@
                 scroll-behavior: auto !important;
             }
             .link-card { opacity: 1; transform: none; }
-            .avatar { opacity: 1; transform: none; }
         }
     </style>
 </head>
 <body>
 
     <header class="header">
-        <div class="avatar" aria-hidden="true">J338</div>
         <h1>JHON<span>338</span></h1>
         <div class="badge">Official Community</div>
     </header>
